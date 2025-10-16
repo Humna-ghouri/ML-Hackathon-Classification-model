@@ -1,8 +1,8 @@
 # 🍷 Wine Quality Prediction
 
-![Wine Pouring GIF](https://media0.giphy.com/media/v1.Y2lkPTZjMDliOTUyajV5OHhqOW94OXE0dGdudDY2cHNjNmxlaHc1em40emZqdDFhazlpdSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/ng6NcNAvohN6M/200w.gif)
+![Wine Pouring GIF](https://media.tenor.com/PLIr_VkF6ywAAAAM/ghostedvpn-hacker-cat.gif)
 
-Predicting wine quality based on physicochemical properties like acidity, sugar, sulphates, and alcohol using machine learning models.  
+Predicting wine quality based on physicochemical properties like **acidity, sugar, sulphates, and alcohol** using Machine Learning models.  
 
 ---
 
@@ -12,7 +12,7 @@ Predicting wine quality based on physicochemical properties like acidity, sugar,
 |--------------------|-------|------------------------------------------|
 | Records            | 1,143 | Wine samples                              |
 | Columns            | 13    | 11 float + 2 integer                      |
-| Target Variable    | quality | Wine quality score (3-8)                 |
+| Target Variable    | quality | Wine quality score (3–8)                 |
 | Missing Values     | 0     | Clean dataset                             |
 
 ---
@@ -20,12 +20,9 @@ Predicting wine quality based on physicochemical properties like acidity, sugar,
 ## 🧹 Data Preprocessing & EDA
 
 - Checked data structure using `.info()` and `.describe()`.  
-- Imbalanced class distribution (mostly 5 & 6) verified using `train['quality'].value_counts()`.  
-- **Visualizations:**  
-  - Pairplots for feature relationships:  
-    ![EDA Pairplot]
-)  
-  - Boxplots to analyze feature trends and outliers.
+- Imbalanced classes (mostly 5 & 6) verified with `train['quality'].value_counts()`.  
+
+
 
 ---
 
@@ -34,16 +31,16 @@ Predicting wine quality based on physicochemical properties like acidity, sugar,
 - **Feature-Target Split:**  
   - `X` → all chemical attributes  
   - `y` → quality labels  
-- **Data Splitting:** 80% train, 20% test (`random_state=42`)  
+- **Train-Test Split:** 80% / 20% (`random_state=42`)  
 - **Scaling:** StandardScaler applied to normalize features  
 
 ---
 
 ## ⚖️ Handling Class Imbalance
 
-- **SMOTE:** Oversampling minority classes.  
-- **RandomUnderSampler:** Balancing majority classes.  
-- Verified balance using `y_resampled.value_counts(normalize=True)`.
+- **SMOTE:** Oversampled minority classes  
+- **RandomUnderSampler:** Balanced majority classes  
+- Verified using `y_resampled.value_counts(normalize=True)` ✅  
 
 ---
 
@@ -57,30 +54,31 @@ Predicting wine quality based on physicochemical properties like acidity, sugar,
 | Decision Tree         | 57.63%  | ![DT](https://img.shields.io/badge/Decision%20Tree-57.6%25-orange) |
 | Random Forest         | 88.00%  | ![RF](https://img.shields.io/badge/Random%20Forest-88%25-brightgreen) |
 
-**Conclusion:** Logistic Regression, SVC, and Random Forest are the top-performing models.  
-
-
+**💡 Top Models:** Logistic Regression, SVC, Random Forest  
 
 ---
 
 ## 🔑 Key Insights
 
-- Higher **alcohol** → higher wine quality  
-- Higher **volatile acidity** → lower wine quality  
- 
+![Wine Insight GIF](https://media.giphy.com/media/3o7abKhOpu0NwenH3O/giphy.gif)
+
+- Higher **alcohol** → higher wine quality 🍷  
+- Higher **volatile acidity** → lower quality ⚠️  
 
 ---
 
 ## 🚀 Conclusion
 
-- Dataset cleaned, scaled, and balanced for reliable modeling  
-- Visualizations helped identify key factors affecting wine quality  
-- Top models achieved **~88% accuracy**  
-- Ready for deployment or further experimentation  
+- Cleaned, scaled, and balanced dataset ✅  
+- Visualizations revealed **key factors** affecting wine quality 📊  
+- Top models achieved **~88% accuracy** 💯  
+- Ready for deployment or further experimentation 💻  
 
 ---
 
-## 💻 Tech Stack
+## 🛠️ Tech Stack
+
+
 
 - Python 3  
 - Pandas, NumPy  
@@ -88,7 +86,7 @@ Predicting wine quality based on physicochemical properties like acidity, sugar,
 - Seaborn, Matplotlib  
 - Imbalanced-learn (SMOTE & UnderSampling)  
 
+---
 
-
-> Made with ❤️ by **[Humna Ghouri]**  
+> Made with ❤️ by **Humna Ghouri**
 
