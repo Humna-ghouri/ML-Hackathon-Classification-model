@@ -8,29 +8,35 @@ Predicting wine quality based on physicochemical properties like **acidity, suga
 
 ## 📊 Dataset Overview
 
-| Feature             | Type   | Description                              |
-|--------------------|-------|------------------------------------------|
-| Records            | 1,143 | Wine samples                              |
-| Columns            | 13    | 11 float + 2 integer                      |
-| Target Variable    | quality | Wine quality score (3–8)                 |
-| Missing Values     | 0     | Clean dataset                             |
+| Feature             | Type       | Description                              |
+|--------------------|-----------|------------------------------------------|
+| Records            | 1,143     | Wine samples                              |
+| Columns            | 13        | 11 float + 2 integer                      |
+| Target Variable    | `quality` | Wine quality score (3–8)                 |
+| Missing Values     | 0         | Clean dataset                             |
+
+**Target Column Details:**  
+- `quality` → integer values ranging from **3 to 8**, representing wine quality ratings.  
+- Class distribution is imbalanced, mostly **5 and 6**.  
 
 ---
 
 ## 🧹 Data Preprocessing & EDA
 
 - Checked data structure using `.info()` and `.describe()`.  
-- Imbalanced classes (mostly 5 & 6) verified with `train['quality'].value_counts()`.  
-
-
+- Verified **class imbalance** using `train['quality'].value_counts()`.  
+- **Visualizations:**  
+  - Pairplots, boxplots, scatterplots, and correlation heatmap to explore relationships.  
+  - Example pairplot (replace with your image path):
+  
 
 ---
 
 ## ⚙️ Feature Preparation
 
 - **Feature-Target Split:**  
-  - `X` → all chemical attributes  
-  - `y` → quality labels  
+  - `X` → all chemical attributes (features)  
+  - `y` → quality (target)  
 - **Train-Test Split:** 80% / 20% (`random_state=42`)  
 - **Scaling:** StandardScaler applied to normalize features  
 
@@ -64,21 +70,20 @@ Predicting wine quality based on physicochemical properties like **acidity, suga
 
 - Higher **alcohol** → higher wine quality 🍷  
 - Higher **volatile acidity** → lower quality ⚠️  
+- Alcohol is **strongest positive predictor**, volatile acidity is **strongest negative predictor**  
 
 ---
 
 ## 🚀 Conclusion
 
-- Cleaned, scaled, and balanced dataset ✅  
+- Dataset cleaned, scaled, and balanced ✅  
 - Visualizations revealed **key factors** affecting wine quality 📊  
-- Top models achieved **~88% accuracy** 💯  
-- Ready for deployment or further experimentation 💻  
+- Logistic Regression, SVC, and Random Forest achieved **~88% accuracy** 💯  
+- Dataset and models are **ready for deployment or further experimentation** 💻  
 
 ---
 
 ## 🛠️ Tech Stack
-
-
 
 - Python 3  
 - Pandas, NumPy  
@@ -88,5 +93,5 @@ Predicting wine quality based on physicochemical properties like **acidity, suga
 
 ---
 
-> Made with ❤️ by **Humna Ghouri**
+> Made with ❤️ by **[Humna Ghouri]**
 
